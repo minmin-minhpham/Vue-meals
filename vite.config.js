@@ -12,5 +12,15 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  server: {
+    port:'3000',
+    // proxy: {
+    //   "/api": {
+    //     target: "https://www.themealdb.com/api/json/v1/1", // Replace with your API URL
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   }
+    // }
+  },
 })
